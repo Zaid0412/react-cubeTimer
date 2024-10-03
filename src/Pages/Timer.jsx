@@ -48,7 +48,7 @@ export const typeContext = createContext('333')
 export const solvesContext = createContext(null)
 
 export default function Timer() {
-    const [type, setType] = useState('555')
+    const [type, setType] = useState('333')
     const [solves, setSolves] = useState(allSolves)
     const [scramble, setScramble] = useState(getScramble(type))
     const [finishSolve, setFinishSolve] = useState(false)

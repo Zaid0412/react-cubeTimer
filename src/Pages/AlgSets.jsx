@@ -38,11 +38,13 @@ export default function AlgSets() {
 
   return (
     <div className='algset-page'>
+      <div className="title">
       <h1>Alg Sets</h1>
+      <AlgSetDropdown setCurAlgSet={setCurAlgSet} setCategory={setCategory}/>
+      </div>
       <div className="header">
       {curAlgSet == 'OLL' && <OLLCategoryBtns setCategory={handleCategory}/>}
       {curAlgSet == 'PLL' && <PLLCategoryBtns setCategory={handleCategory} />}
-      <AlgSetDropdown setCurAlgSet={setCurAlgSet} setCategory={setCategory}/>
       </div>
       <div className="algs">
       {curAlgSet == 'OLL' && OllAlgs.map(alg => {

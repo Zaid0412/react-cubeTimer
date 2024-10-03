@@ -96,9 +96,6 @@ export const getCurPzlType = (curPzl) =>{
   
 }
 
-console.log(getCurPzlType('555'))
-
-
 export default function Solves() {
 
   const [solves, setSolves] = useState([])
