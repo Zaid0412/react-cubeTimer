@@ -180,6 +180,7 @@ body.dark{
   justify-content: center;
   align-items: center;
   gap: 2em;
+  margin-bottom: 8                             vh;
 }
 
 .timer-page .timer .scramble-controls .lucide{
@@ -648,6 +649,12 @@ dialog[open] {
 
 .alg-display .alg-info-card .alg-category{
   opacity: .5;
+  cursor: pointer;
+  transition: all 0.075s ease-in-out;
+}
+
+.alg-display .alg-info-card .alg-category:hover{
+  opacity: 1;
 }
 
 .alg-display .alg-info-card .alg-category span{

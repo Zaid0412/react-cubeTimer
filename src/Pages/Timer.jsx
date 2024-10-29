@@ -96,7 +96,7 @@ export default function Timer() {
       <div className="timer">
       <div className="scrambleText-display"></div>
       <div className="scramble-controls">
-      {/* <Copy size={20} onClick={handleCopy} /> <RotateCcw size={20} onClick={newScramble} /> */}
+      <Copy size={20} onClick={handleCopy} /> <RotateCcw size={20} onClick={newScramble} />
       </div>
     <div className="timer-diplay"><Stopwatch scramble={scramble.scramble} type={scramble.type} setFinishSolve={setSolveState} allSolves={solves} setSolves={setSolves}/></div>
       </div>

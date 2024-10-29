@@ -13,6 +13,7 @@ export default function AlgSets() {
   const [curAlgSet, setCurAlgSet] = useState("OLL")
   const [OllAlgs, setOllAlgs] = useState(OllAlgs_)
   const [PllAlgs, setPllAlgs] = useState(PllAlgs_)
+  const testVar = 'test'
 
   const handleCategory = (categ) => {
     setCategory(c => c = categ)
@@ -49,12 +50,12 @@ export default function AlgSets() {
       <div className="algs">
       {curAlgSet == 'OLL' && OllAlgs.map(alg => {
         return (
-          <AlgDisplay algObj={alg} key={alg.id}/> 
+          <AlgDisplay algObj={alg} setCategory={setCategory} key={alg.id}/> 
         )
       })}
       {curAlgSet == 'PLL' && PllAlgs.map(alg => {
         return (
-          <AlgDisplay algObj={alg} key={alg.id}/> 
+          <AlgDisplay algObj={alg} setCategory={setCategory} key={alg.id}/> 
         )
       })}
       </div>

@@ -81,17 +81,20 @@ import Gd from '../Algs/PllPics/Gd.png'
 
 import React from 'react'
 
-export default function AlgDisplay({algObj}) {
+export default function AlgDisplay({algObj, setCategory}) {
     let OllAlgsArr = [Oll1, Oll2, Oll3, Oll4, Oll5, Oll6, Oll7, Oll8, Oll9, Oll10, Oll11, Oll12, Oll13, Oll14, Oll15, Oll16, Oll17, Oll18, Oll19, Oll20, Oll21, Oll22, Oll23, Oll24, Oll25, Oll26, Oll27, Oll28, Oll29, Oll30, Oll31, Oll32, Oll33, Oll34, Oll35, Oll36, Oll37, Oll38, Oll39, Oll40, Oll41, Oll42, Oll43, Oll44, Oll45, Oll46, Oll47, Oll48, Oll49, Oll50, Oll51, Oll52, Oll53, Oll54, Oll55, Oll56, Oll57]
     let PllAlgsArr = [Ua, Ub, H, Z, Aa, Ab, E, T, F, Ja, Jb, Ra, Rb, Y, Na, Nb, V, Ga, Gb, Gc, Gd]
     
+    const handleCategoryClick = () => {
+      setCategory(algObj.category)
+    }
   return (
     <div>
         <div className="alg-display">
           <div className="alg-info-card">
             <h2>{algObj.name} ({algObj.id})</h2>
             <p className='alg-alg'>{algObj.alg}</p>
-            <p className='alg-category'>Category: <span>{algObj.category}</span></p>
+            <p className='alg-category' onClick={handleCategoryClick}>Category: <span>{algObj.category}</span></p>
           </div>
           <div className="alg-img-card">
             <img style={{transform: `rotate(${algObj.rotation}deg)`}} src={algObj.img} alt="" />

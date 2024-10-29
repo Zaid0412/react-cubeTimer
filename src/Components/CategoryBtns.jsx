@@ -1,13 +1,13 @@
-const OLLCategoryBtns = ({setCategory}) => {
+const OLLCategoryBtns = ({setCategory, category}) => {
     return (
         <>
             <form className="radio-inputs">
-            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
-                <input type="radio" name="radio" htmlFor="All" />
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile" >
+                <input type="radio" name="radio" htmlFor="All" defaultChecked/>
                 <span className="name">All</span>
             </label>
             <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
-                <input type="radio" name="radio" htmlFor="Solved Cross" />
+                <input type="radio" name="radio" htmlFor="Solved Cross"/>
                 <span className="name">Solved Cross</span>
             </label>
             <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="laptop">
@@ -63,7 +63,7 @@ const OLLCategoryBtns = ({setCategory}) => {
     )
 }
 
-const PLLCategoryBtns = ({setCategory}) => {
+const PLLCategoryBtns = ({setCategory, category}) => {
     return (
         <>
             <form className="radio-inputs">
