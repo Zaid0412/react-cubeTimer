@@ -35,5 +35,8 @@
   },
   "resolutions": {
   "reactjs-dropdown-component": "^1.2.0"
+  },
+  "overrides": {
+    "reactjs-dropdown-component": "^1.2.0"
   }
 }
