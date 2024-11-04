@@ -37,6 +37,6 @@
   "reactjs-dropdown-component": "^1.1.0"
   },
   "overrides": {
-    "reactjs-dropdown-component": "^1.1.0"
+    "reactjs-dropdown-component": "$react-error-overlay"
   }
 }
