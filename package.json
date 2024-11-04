@@ -34,9 +34,9 @@
     "vite": "^5.4.1"
   },
   "resolutions": {
-  "reactjs-dropdown-component": "^1.2.0"
+  "reactjs-dropdown-component": "^1.1.0"
   },
   "overrides": {
-    "reactjs-dropdown-component": "^1.2.0"
+    "reactjs-dropdown-component": "^1.1.0"
   }
 }
