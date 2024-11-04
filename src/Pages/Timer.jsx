@@ -72,8 +72,12 @@ export default function Timer() {
       }
     }, [finishSolve])
     
-    const handleCopy = () => {
+    const handleCopy = (e) => {
       navigator.clipboard.writeText(scramble.scramble);
+      e.target.classList.add('copyActive')
+      setTimeout(() => {
+        e.target.classList.remove('copyActive')
+      }, 2000);
     }
   
     const newScramble = () => {

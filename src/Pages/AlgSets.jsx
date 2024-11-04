@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import AlgDisplay from '../Components/AlgDisplay';
 import PllAlgs_ from '../Algs/PllAlgs'
 import OllAlgs_ from '../Algs/OllAlg'
-import {OLLCategoryBtns, PLLCategoryBtns} from '../Components/CategoryBtns';
+import F2lAlgs_ from '../Algs/F2lAlgs';
+import {OLLCategoryBtns, PLLCategoryBtns, F2LCategoryBtns} from '../Components/CategoryBtns';
 import { AlgSetDropdown } from '../Components/Dropdown';
 
 
@@ -13,13 +14,14 @@ export default function AlgSets() {
   const [curAlgSet, setCurAlgSet] = useState("OLL")
   const [OllAlgs, setOllAlgs] = useState(OllAlgs_)
   const [PllAlgs, setPllAlgs] = useState(PllAlgs_)
-  const testVar = 'test'
+  const [F2lAlgs, setF2lAlgs] = useState(F2lAlgs_)
 
   const handleCategory = (categ) => {
     setCategory(c => c = categ)
   }
   
   useEffect(() => {
+    console.log(category)
     if (category && curAlgSet == 'OLL') {
       console.log(category)
       if (category == 'All') {
@@ -34,6 +36,12 @@ export default function AlgSets() {
       }else {
         setPllAlgs(PllAlgs_.filter(alg => alg.category == category ))
       }
+    }else if(category && curAlgSet == 'F2L'){
+      if (category == 'All') {
+        setF2lAlgs(F2lAlgs_.filter(alg => alg))
+      }else {
+        setF2lAlgs(F2lAlgs_.filter(alg => alg.category == category ))
+      }
     }
   }, [category])
 
@@ -46,6 +54,7 @@ export default function AlgSets() {
       <div className="header">
       {curAlgSet == 'OLL' && <OLLCategoryBtns setCategory={handleCategory}/>}
       {curAlgSet == 'PLL' && <PLLCategoryBtns setCategory={handleCategory} />}
+      {curAlgSet == 'F2L' && <F2LCategoryBtns setCategory={handleCategory} />}
       </div>
       <div className="algs">
       {curAlgSet == 'OLL' && OllAlgs.map(alg => {
@@ -54,6 +63,11 @@ export default function AlgSets() {
         )
       })}
       {curAlgSet == 'PLL' && PllAlgs.map(alg => {
+        return (
+          <AlgDisplay algObj={alg} setCategory={setCategory} key={alg.id}/> 
+        )
+      })}
+      {curAlgSet == 'F2L' && F2lAlgs.map(alg => {
         return (
           <AlgDisplay algObj={alg} setCategory={setCategory} key={alg.id}/> 
         )

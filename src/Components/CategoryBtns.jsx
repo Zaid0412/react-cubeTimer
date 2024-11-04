@@ -68,7 +68,7 @@ const PLLCategoryBtns = ({setCategory, category}) => {
         <>
             <form className="radio-inputs">
             <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
-                <input type="radio" name="radio" htmlFor="All" />
+                <input type="radio" name="radio" htmlFor="All" defaultChecked/>
                 <span className="name">All</span>
             </label>
             <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
@@ -96,4 +96,42 @@ const PLLCategoryBtns = ({setCategory, category}) => {
     )
 }
 
-export  {OLLCategoryBtns, PLLCategoryBtns}
+
+const F2LCategoryBtns = ({setCategory, category}) => {
+    return (
+        <>
+            <form className="radio-inputs">
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
+                <input type="radio" name="radio" htmlFor="All" defaultChecked/>
+                <span className="name">All</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="mobile">
+                <input type="radio" name="radio" htmlFor="Easy Insert" />
+                <span className="name">Easy Inserts</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="laptop">
+                <input type="radio" name="radio" htmlFor="Disconnected Pairs" />
+                <span className="name">Disconnected Pairs</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="tv">
+                <input type="radio" name="radio" htmlFor="Corner in Slot" />
+                <span className="name">Corner in Slot</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="gaming">
+                <input type="radio" name="radio" htmlFor="Edge in Slot" />
+                <span className="name">Edge in Slot</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="appliances">
+                <input type="radio" name="radio" htmlFor="Connected Pairs" />
+                <span className="name">Connected Pairs</span>
+            </label>
+            <label onClick={(e) => setCategory(e.target.getAttribute('for'))} className="radio" id="appliances">
+                <input type="radio" name="radio" htmlFor="Pieces in Slot" />
+                <span className="name">Pieces in Slot</span>
+            </label>
+           </form>
+        </>
+    )
+}
+
+export  {OLLCategoryBtns, PLLCategoryBtns, F2LCategoryBtns}

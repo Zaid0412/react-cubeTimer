@@ -180,11 +180,20 @@ body.dark{
   justify-content: center;
   align-items: center;
   gap: 2em;
-  margin-bottom: 8                             vh;
+  margin-bottom: 8vh;
 }
 
 .timer-page .timer .scramble-controls .lucide{
+  box-sizing: content-box;
   cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.timer-page .timer .scramble-controls .lucide-copy.copyActive{
+  background-color: var(--secondary-clr);
+  color: white;
 }
 
 .timer-page .scramble-display{
@@ -669,6 +678,11 @@ dialog[open] {
 .alg-display .alg-img-card img{
   width: 8em;
   height: 8em;
+  border-radius: 7px;
+}
+
+.alg-display .alg-img-card img.f2lPic{
+  filter: saturate(200%);
 }
 
 .algset-page .dd-header{

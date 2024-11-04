@@ -97,7 +97,7 @@ export default function AlgDisplay({algObj, setCategory}) {
             <p className='alg-category' onClick={handleCategoryClick}>Category: <span>{algObj.category}</span></p>
           </div>
           <div className="alg-img-card">
-            <img style={{transform: `rotate(${algObj.rotation}deg)`}} src={algObj.img} alt="" />
+            <img style={{transform: `rotate(${algObj.rotation}deg)`}} className={algObj.className} src={algObj.img} alt="" />
           </div>
         </div>
     </div>

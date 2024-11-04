@@ -38,6 +38,10 @@ const algSetOptions = [
     label: 'PLL',
     value: 'PLL',
   },
+  {
+    label: 'F2L',
+    value: 'F2L',
+  },
 ];
 
 
